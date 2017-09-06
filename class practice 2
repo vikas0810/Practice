@@ -1,0 +1,53 @@
+Name = c("A", "B", "C", "D", "E") 
+Age = c(23,25,27,29,31) 
+Maths_Marks = c(87,89,90,99,76) 
+Science_Marks = c(87,89,90,99,76)
+Total_Marks = c(174,178,180,198,152)
+# create data frame from 3 vectors
+df = data.frame(Name, Age, Maths_Marks, Science_Marks,Total_Marks)       # df is a data frame
+View(df)
+View(df$Name)
+df$percent <- df$Maths_Marks/df$Total_Marks
+View(df)
+df1 <- df
+df1 <- df1[,c(2:6)]
+df1
+df1 <- df1[,"Age"]
+df1
+df1 <- df1[,c("Name")]
+df1
+df
+df1
+names(df)
+letters[1:5]
+names(df) <- c(letters[1:6])
+df
+
+
+vect1 <- seq(1,10,by=2)
+vect1
+vect1[3]=100
+vect1
+v_col =names(df)
+v_col[3]="New"
+df2 <- df
+df
+names(df2) <- v_col
+df2
+names(df2)[3] <- "Vikas"
+df2
+df[2,3]<-45
+fd
+df
+df$log <- log(df$b)
+df
+class(df$a)
+df$a <- as.character(df$a)
+
+nn <- c("xx", "23", 24.5, "78.4")
+class(nn)
+nn <- as.numeric(nn)
+class(nn)
+nn
+is.na(nn)
+table(is.na(nn))
