@@ -1,0 +1,18 @@
+table(df$b>mean(df$b))
+s1 <- df$b>mean(df$b)
+df4 <- df[s1,]
+View(df4)
+df4 <- df[!s1,]
+View(df4)
+s2 <- df[df$b>20 & df$c>80,]
+s2
+sample_index <- sample(1:nrow(df),3,replace = F)
+sample_index
+df4 <- df[sample_index,]
+df4
+dt_missing <-data.frame(age=c(12,34,NA, 45, 78),income = c(0,1,2,NA,8))
+View(dt_missing)
+dt_missing$age_missing <- is.na(dt_missing$age)
+dt_missing$income_missing <- is.na(dt_missing$income)
+dt_missing$age_missing | dt_missing$income_missing 
+dt_missing_non <- dt_missing[!(dt_missing$age_missing | dt_missing$income_missing),]
